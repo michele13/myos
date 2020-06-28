@@ -1,0 +1,4 @@
+myos
+logs
+stage
+rootfs-*.tar*

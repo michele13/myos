@@ -1,0 +1,17 @@
+#!/bin/sh
+export top=$PWD
+function build(){
+	if [ -f $top/stage/$1 ]; then
+		sh $top/scripts/$1.sh > $top/logs/$1 2>&1
+		touch $top/stage/$1
+	fi
+
+}
+
+export set +h
+umask 022
+export CLFS CLFS_TARGET
+export LC_ALL=POSIX
+export PATH={CLFS}/cross-tools/bin:/bin:/usr/bin
+unset CFLAGS CXXFLAGS
+export CLFS_ARCH=$(echo ${LJOS_TARGET} | sed -e 's/-.*//' -e 's/i.86/i386/')

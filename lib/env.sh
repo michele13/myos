@@ -1,0 +1,11 @@
+#!/bin/echo "This file is sourced, not run: "
+
+export CC="${MYOS_TARGET}-gcc"
+export CXX="${MYOS_TARGET}-g++"
+export CPP="${MYOS_TARGET}-gcc -E"
+export AR="${MYOS_TARGET}-ar"
+export AS="${MYOS_TARGET}-as"
+export LD="${MYOS_TARGET}-ld"
+export RANLIB="${MYOS_TARGET}-ranlib"
+export READELF="${MYOS_TARGET}-readelf"
+export STRIP="${MYOS_TARGET}-strip"

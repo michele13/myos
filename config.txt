@@ -1,0 +1,5 @@
+MYOS=$top/myos
+MYOS_ARCH=x86
+MYOS_TARGET=i686-linux-gnu
+MYOS_CPU=i686
+MAKEFLAGS='-j2'
